@@ -1,0 +1,34 @@
+.model FSM
+.inputs FULL_0 FULL_1
+.outputs O_INIT_LOAD O_INIT_MAIN SEL_0 SEL_1
+
+
+.start_kiss
+.i 2
+.o 4
+.s 5
+.r START
+
+00 START START 0000
+1- START START 0000
+
+01 START LOAD_A 1001
+-- LOAD_A LOAD_B 1010
+-- LOAD_B LOAD_C 1011
+-- LOAD_C MAIN 0100
+
+00 MAIN MAIN 0100
+-1 MAIN MAIN 0100
+
+10 MAIN START 0100
+.end_kiss
+
+
+.code START 000
+.code LOAD_A 001
+.code LOAD_B 010
+.code LOAC_C 011
+.code MAIN 111
+
+
+.end
