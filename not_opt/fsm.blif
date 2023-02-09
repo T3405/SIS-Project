@@ -27,7 +27,7 @@
 .code START 000
 .code LOAD_A 001
 .code LOAD_B 010
-.code LOAC_C 011
+.code LOAD_C 011
 .code MAIN 111
 
 
