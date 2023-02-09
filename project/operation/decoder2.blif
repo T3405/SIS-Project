@@ -1,0 +1,9 @@
+.model DECODER2
+.inputs A B
+.outputs O E
+.names A B O
+10 1
+.names A B O E
+1-0 1
+-00 1
+.end

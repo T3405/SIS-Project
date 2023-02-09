@@ -1,0 +1,22 @@
+.model DEMUX2
+.inputs I S0 S1
+.outputs O0 O1 O2 O3
+
+.names I S0 S1 O0
+100 1
+.names I S0 S1 O1
+101 1
+.names I S0 S1 O2
+110 1
+.names I S0 S1 O3
+111 1
+
+
+.end
+
+#?# DEMUX 
+# 100 | 1000
+# 101 | 0100
+# 110 | 0010
+# 111 | 0001
+#!#

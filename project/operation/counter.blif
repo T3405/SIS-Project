@@ -1,0 +1,24 @@
+.model COUNTER
+.inputs ENABLE
+.outputs Z1 Z0
+
+#TODO check if this work
+
+.subckt REG2_1 I0=Z0 I1=Z1 Z0=Q0 Z1=Q1
+.subckt SUM2 A0=Q0 A1=Q1 B0=CONST0 B1=CONST0 CI=CONST1 Z0=X0 Z1=X1
+
+.subckt MUX A=CONST1 B=X0 S=ENABLE Z=Z0
+.subckt MUX A=CONST1 B=X1 S=ENABLE Z=Z1
+
+#WHEN ENABLE IS SET TO 0 THE Z1 Z0 = 11
+
+
+.names CONST1
+1
+.names CONST0
+0
+
+.end
+.search register/reg2_1.blif
+.search operation/sum2.blif
+.search mux/mux.blif

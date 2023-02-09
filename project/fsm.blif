@@ -1,0 +1,51 @@
+.model FSM
+.inputs I0 I1 O_FIN_LOAD
+.outputs INIT_LOAD INIT_MAIN
+.latch    [2] LatchOut_v3   0
+.latch    [3] LatchOut_v4   0
+.start_kiss
+.i 3
+.o 2
+.p 8
+.s 3
+.r START
+00- START START 00
+-1- START START 00
+10- START LOAD 10
+--0 LOAD LOAD 10
+--1 LOAD MAIN 01
+00- MAIN MAIN 01
+1-- MAIN MAIN 01
+01- MAIN START 00
+.end_kiss
+.latch_order LatchOut_v3 LatchOut_v4
+.code START 00
+.code LOAD 10
+.code MAIN 01
+.names I0 I1 O_FIN_LOAD LatchOut_v3 LatchOut_v4 [2]
+--01- 1
+10-00 1
+.names I0 I1 O_FIN_LOAD LatchOut_v3 LatchOut_v4 [3]
+--11- 1
+1---1 1
+-0--1 1
+.names I0 I1 O_FIN_LOAD LatchOut_v3 LatchOut_v4 INIT_LOAD
+--01- 1
+10-00 1
+.names I0 I1 O_FIN_LOAD LatchOut_v3 LatchOut_v4 INIT_MAIN
+--11- 1
+1---1 1
+-0--1 1
+.exdc 
+.inputs I0 I1 O_FIN_LOAD LatchOut_v3 LatchOut_v4
+.outputs [2] [3] INIT_LOAD INIT_MAIN
+.names LatchOut_v3 LatchOut_v4 [2]
+11 1
+.names LatchOut_v3 LatchOut_v4 [3]
+11 1
+.names LatchOut_v3 LatchOut_v4 INIT_LOAD
+11 1
+.names LatchOut_v3 LatchOut_v4 INIT_MAIN
+11 1
+.end
+

@@ -1,0 +1,27 @@
+.model C_REG_SELECT
+.inputs I4 I3 I2 I1 I0
+.outputs O4 O3 O2 O1 O0
+
+#Used in the input for making sure that the input of C Register is not greater than 24
+
+#This method is min(A,B)
+.subckt SELECT_LESS A4=I4 A3=I3 A2=I2 A1=I1 A0=I0 B4=CON4 B3=CON3 B2=CON2 B1=CON1 B0=CON0 O4=O4 O3=O3 O2=O2 O1=O1 O0=O0
+
+
+.names CON4
+1
+.names CON3
+1
+.names CON2
+0
+.names CON1
+0
+.names CON0
+0
+
+
+
+
+.end
+.search logic/sel_le.blif
+

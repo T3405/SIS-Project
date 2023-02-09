@@ -1,0 +1,7 @@
+.model OR
+.inputs A B
+.outputs C
+.names A B C
+-1 1
+1- 1
+.end

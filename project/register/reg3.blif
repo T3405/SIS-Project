@@ -1,0 +1,8 @@
+.model REG3
+.inputs I0 I1 I2
+.outputs Z0 Z1 Z2
+.subckt REG1 I=I2 Z=Z2
+.subckt REG1 I=I1 Z=Z1
+.subckt REG1 I=I0 Z=Z0
+.end
+.search register/reg.blif

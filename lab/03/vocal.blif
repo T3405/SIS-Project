@@ -1,0 +1,10 @@
+.model vocal
+.inputs v w x y z
+.outputs o
+.names v w x y z o
+00000 1
+00100 1
+01000 1
+01110 1
+10100 1
+.end

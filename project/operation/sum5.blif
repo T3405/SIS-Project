@@ -1,0 +1,12 @@
+.model SUM5
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0 CI
+.outputs O4 O3 O2 O2 O1 O0 CO
+.subckt SUM A=A0 B=B0 CI=CI Z=O0 CO=C0
+.subckt SUM A=A1 B=B1 CI=C0 Z=O1 CO=C1
+.subckt SUM A=A2 B=B2 CI=C1 Z=O2 CO=C2
+.subckt SUM A=A3 B=B3 CI=C2 Z=O3 CO=C3
+.subckt SUM A=A4 B=B4 CI=C3 Z=O4 CO=CO
+
+.end
+.search operation/sum.blif
+

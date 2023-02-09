@@ -1,0 +1,10 @@
+.model MUX_5
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0 S
+.outputs O4 O3 O2 O1 O0
+.subckt MUX A=A4 B=B4 S=S Z=O4
+.subckt MUX A=A3 B=B3 S=S Z=O3
+.subckt MUX A=A2 B=B2 S=S Z=O2
+.subckt MUX A=A1 B=B1 S=S Z=O1
+.subckt MUX A=A0 B=B0 S=S Z=O0
+.end
+.search mux/mux.blif

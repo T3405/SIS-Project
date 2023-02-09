@@ -1,0 +1,7 @@
+.model XAND
+.inputs a b
+.outputs c
+.names a b c
+01 1
+10 1
+.end

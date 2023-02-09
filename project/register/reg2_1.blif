@@ -1,0 +1,6 @@
+.model REG2_1
+.inputs I0 I1
+.outputs Z0 Z1
+.latch I0 Z0 re NIL 1
+.latch I1 Z1 re NIL 1
+.end

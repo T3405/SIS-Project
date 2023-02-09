@@ -1,0 +1,12 @@
+.model NOR3
+.inputs A B C
+.outputs O
+
+.subckt OR A=A B=B C=Z0
+.subckt NOR A=Z0 B=C C=O
+
+
+
+.end
+.search port/nor.blif
+.search port/or.blif

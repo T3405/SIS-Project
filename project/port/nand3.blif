@@ -1,0 +1,13 @@
+.model NAND3
+.inputs A B C
+.outputs O
+
+.subckt AND A=A B=B C=Z0
+.subckt NAND A=Z0 B=C C=O
+
+
+
+.end
+.search port/and.blif
+.search port/nand.blif
+

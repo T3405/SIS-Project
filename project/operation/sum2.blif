@@ -1,0 +1,8 @@
+.model SUM2
+.inputs A0 B0 A1 B1 CI
+.outputs Z0 Z1 CO
+.subckt SUM A=A0 B=B0 CI=CI Z=Z0 CO=C0
+.subckt SUM A=A1 B=B1 CI=C0 Z=Z1 CO=CO
+
+.end
+.search operation/sum.blif

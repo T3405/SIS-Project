@@ -1,0 +1,16 @@
+.model SELECT_LESS
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs O4 O3 O2 O1 O0
+
+.subckt LESS_EQUAL A4=A4 A3=A3 A2=A2 A1=A1 A0=A0 B4=B4 B3=B3 B2=B2 B1=B1 B0=B0 O=LESS_EQ
+
+# A B
+.subckt MUX A=B0 B=A0 S=LESS_EQ Z=O0
+.subckt MUX A=B1 B=A1 S=LESS_EQ Z=O1
+.subckt MUX A=B2 B=A2 S=LESS_EQ Z=O2
+.subckt MUX A=B3 B=A3 S=LESS_EQ Z=O3
+.subckt MUX A=B4 B=A4 S=LESS_EQ Z=O4
+
+.end
+.search mux/mux.blif
+.search logic/leq.blif

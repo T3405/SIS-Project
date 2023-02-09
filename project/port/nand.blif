@@ -1,0 +1,7 @@
+.model NAND
+.inputs A B
+.outputs C
+.names A B C
+0- 1
+-0 1
+.end

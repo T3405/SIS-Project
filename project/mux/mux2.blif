@@ -1,0 +1,9 @@
+.model MUX2
+.inputs A B C D S0 S1
+.outputs O
+.subckt MUX A=A B=B S=S0 Z=Z0
+.subckt MUX A=C B=D S=S0 Z=Z1
+.subckt MUX A=Z0 B=Z1 S=S1 Z=O
+
+.end
+.search mux/mux.blif

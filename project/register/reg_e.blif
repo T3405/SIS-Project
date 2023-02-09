@@ -1,0 +1,9 @@
+.model REG1_E
+.inputs I ENABLE
+.outputs Z
+.latch Q Z fe NIL 0
+
+.subckt MUX A=Z B=I S=ENABLE Z=Q
+
+.end
+.search mux/mux.blif

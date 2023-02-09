@@ -1,0 +1,7 @@
+.model MUX
+.inputs A B S
+.outputs Z
+.names A B S Z
+1-0 1
+-11 1
+.end

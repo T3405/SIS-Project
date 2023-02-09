@@ -1,0 +1,13 @@
+.model SUM
+.inputs A B CI
+.outputs Z CO
+.names A B CI CO Z
+1--0 1
+-1-0 1
+--10 1
+111- 1
+.names A B CI CO
+11- 1
+1-1 1
+-11 1
+.end
