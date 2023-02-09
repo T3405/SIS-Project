@@ -1,5 +1,5 @@
 .model DATAPATH
-.inputs I4 I3 I2 I1 I0 INIT_MAIN INIT_LOAD
+.inputs I4 I3 I2 I1 I0 INIT_MAIN INIT_LOAD SEL_0 SEL_1
 .outputs O4 O3 O2 O1 O0 FIN_LOAD
 
 
@@ -32,9 +32,9 @@
 #---------------------------------------------------------------
 
 # INIT_LOAD START ----------------------------------------------
-.subckt COUNTER ENABLE=INIT_LOAD Z1=COUNTER_1 Z0=COUNTER_0
+#.subckt COUNTER ENABLE=INIT_LOAD Z1=COUNTER_1 Z0=COUNTER_0
 
-.subckt DEMUX2 I=INIT_LOAD O0=LOAD_ENA O1=LOAD_ENB O2=LOAD_ENC O3=FIN_COUNTER S0=COUNTER_0 S1=COUNTER_1
+.subckt DEMUX2 I=INIT_LOAD O1=LOAD_ENA O2=LOAD_ENB O3=LOAD_ENC S0=SEL_0 S1=SEL_1
 
 .subckt OR A=MAIN_ENA B=LOAD_ENA C=EN_A
 .subckt OR A=MAIN_ENB B=LOAD_ENB C=EN_B
@@ -103,8 +103,6 @@
 .names CONST0
 0
 
-.names FIN_COUNTER INIT_LOAD FIN_LOAD
-11 1
 
 .end
 

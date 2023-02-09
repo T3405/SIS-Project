@@ -24,11 +24,11 @@
 .end_kiss
 
 
-.code START 000
-.code LOAD_A 001
+.code START 111
+.code LOAD_A 101
 .code LOAD_B 010
-.code LOAD_C 011
-.code MAIN 111
+.code LOAD_C 000
+.code MAIN 011
 
 
 .end
