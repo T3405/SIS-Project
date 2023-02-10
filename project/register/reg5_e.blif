@@ -1,6 +1,6 @@
 .model REG5_E
-.inputs I0 I1 I2 I3 I4 ENABLE
-.outputs O0 O1 O2 O3 O4
+.inputs I4 I3 I2 I1 I0 ENABLE
+.outputs O4 O3 O2 O1 O0
 .subckt REG1_E I=I0 Z=O0 ENABLE=ENABLE
 .subckt REG1_E I=I1 Z=O1 ENABLE=ENABLE
 .subckt REG1_E I=I2 Z=O2 ENABLE=ENABLE

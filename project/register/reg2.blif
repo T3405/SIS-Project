@@ -1,6 +1,6 @@
 .model REG2
-.inputs I0 I1
-.outputs Z0 Z1
+.inputs I1 I0
+.outputs Z1 Z0
 .subckt REG1 I=I1 Z=Z1
 .subckt REG1 I=I0 Z=Z0
 .end
