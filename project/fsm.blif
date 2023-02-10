@@ -1,25 +1,25 @@
 .model FSM
 .inputs FULL_0 FULL_1
-.outputs O_INIT_LOAD O_INIT_MAIN SEL_0 SEL_1
-.latch    [423] LatchOut_v2   1
-.latch    [424] LatchOut_v3   1
-.latch    [425] LatchOut_v4   1
+.outputs O_INIT_LOAD O_INIT_MAIN SEL_0 SEL_1 SEL_2
+.latch    [2649] LatchOut_v2   1
+.latch    [2650] LatchOut_v3   1
+.latch    [2651] LatchOut_v4   1
 .start_kiss
 .i 2
-.o 4
+.o 5
 .p 10
 .s 6
 .r START
-00 START START 0000
-1- START START 0000
-01 START LOAD 0000
--- LOAD LOAD_A 1001
--- LOAD_A LOAD_B 1010
--- LOAD_B LOAD_C 1011
--- LOAD_C MAIN 0100
-00 MAIN MAIN 0100
--1 MAIN MAIN 0100
-10 MAIN START 0000
+00 START START 00000
+1- START START 00000
+01 START LOAD 00000
+-- LOAD LOAD_A 10100
+-- LOAD_A LOAD_B 10010
+-- LOAD_B LOAD_C 10001
+-- LOAD_C MAIN 01000
+00 MAIN MAIN 01000
+-1 MAIN MAIN 01000
+10 MAIN START 00000
 .end_kiss
 .latch_order LatchOut_v2 LatchOut_v3 LatchOut_v4
 .code START 111
@@ -28,17 +28,17 @@
 .code LOAD_B 011
 .code LOAD_C 100
 .code MAIN 101
-.names FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [423]
+.names FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [2649]
 -01- 1
 --00 1
 110- 1
 01-1 1
 -111 1
-.names FULL_0 FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [424]
+.names FULL_0 FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [2650]
 --00- 1
 --111 1
 101-1 1
-.names FULL_0 FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [425]
+.names FULL_0 FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4 [2651]
 1-1-- 1
 --00- 1
 ---10 1
@@ -53,20 +53,20 @@
 ---00 1
 0-10- 1
 -110- 1
-.names LatchOut_v2 LatchOut_v3 SEL_0
-01 1
+.names LatchOut_v3 LatchOut_v4 SEL_0
+10 1
+.names LatchOut_v2 LatchOut_v3 SEL_1
 00 1
-.names LatchOut_v2 LatchOut_v3 LatchOut_v4 SEL_1
-01- 1
--10 1
+.names LatchOut_v2 LatchOut_v3 SEL_2
+01 1
 .exdc 
 .inputs FULL_0 FULL_1 LatchOut_v2 LatchOut_v3 LatchOut_v4
-.outputs [423] [424] [425] O_INIT_LOAD O_INIT_MAIN SEL_0 SEL_1
-.names LatchOut_v2 LatchOut_v4 [423]
+.outputs [2649] [2650] [2651] O_INIT_LOAD O_INIT_MAIN SEL_0 SEL_1 SEL_2
+.names LatchOut_v2 LatchOut_v4 [2649]
 00 1
-.names LatchOut_v2 LatchOut_v4 [424]
+.names LatchOut_v2 LatchOut_v4 [2650]
 00 1
-.names LatchOut_v2 LatchOut_v4 [425]
+.names LatchOut_v2 LatchOut_v4 [2651]
 00 1
 .names LatchOut_v2 LatchOut_v4 O_INIT_LOAD
 00 1
@@ -75,5 +75,7 @@
 .names LatchOut_v2 LatchOut_v4 SEL_0
 00 1
 .names LatchOut_v2 LatchOut_v4 SEL_1
+00 1
+.names LatchOut_v2 LatchOut_v4 SEL_2
 00 1
 .end
