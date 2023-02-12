@@ -1,0 +1,9 @@
+.model AND3
+.inputs A B C
+.outputs O
+
+.names A B C O
+111 1
+
+
+.end

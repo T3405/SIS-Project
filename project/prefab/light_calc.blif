@@ -1,0 +1,31 @@
+.model LIGHT_CALC
+.inputs ENABLE OUT_LIGHT LIGHT IS_RESET
+.outputs O
+
+.subckt MUX A=LIGHT B=OUT_LIGHT S=ENABLE Z=OUTPUT_MUX
+
+.subckt NOT A=IS_RESET O=NOT_RESET
+
+.subckt AND A=NOT_RESET B=OUTPUT_MUX C=O
+
+
+
+
+#?#
+#0 0 0 0 | 0
+#0 0 1 0 | 1
+#0 1 0 0 | 0
+#0 1 1 0 | 1
+#1 0 0 0 | 0
+#1 0 1 0 | 0
+#1 1 0 0 | 1
+#1 1 1 0 | 1
+#!#
+
+
+.end
+.search mux/mux.blif
+.search port/and.blif
+.search port/not.blif
+
+

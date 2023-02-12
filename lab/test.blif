@@ -1,0 +1,14 @@
+.model TEST
+.inputs A B
+.outputs C D
+
+.names A B C
+10 1
+.names A B D
+11 1
+
+
+
+
+
+.end
