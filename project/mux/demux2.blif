@@ -1,14 +1,14 @@
 .model DEMUX2
-.inputs I S0 S1
+.inputs I S1 S0
 .outputs O0 O1 O2 O3
 
-.names I S0 S1 O0
+.names I S1 S0 O0
 100 1
-.names I S0 S1 O1
+.names I S1 S0 O1
 101 1
-.names I S0 S1 O2
+.names I S1 S0 O2
 110 1
-.names I S0 S1 O3
+.names I S1 S0 O3
 111 1
 
 

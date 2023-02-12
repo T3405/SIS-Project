@@ -5,8 +5,17 @@
 .subckt OR A=A B=B C=Z0
 .subckt NOR A=Z0 B=C C=O
 
-
-
 .end
 .search port/nor.blif
 .search port/or.blif
+
+#?# NOR
+#000 | 1
+#001 | 0
+#010 | 0
+#011 | 0
+#100 | 0
+#101 | 0
+#110 | 0
+#111 | 0
+#!#
