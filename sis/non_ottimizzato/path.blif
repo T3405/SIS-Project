@@ -43,13 +43,6 @@
 #---------------------------------------------------------------
 
 # INIT_LOAD START ----------------------------------------------
-##.subckt COUNTER ENABLE=INIT_LOAD Z1=COUNTER_1 Z0=COUNTER_0
-
-#.subckt DEMUX2 I=INIT_LOAD O1=LOAD_ENA O2=LOAD_ENB O3=LOAD_ENC S0=SEL_0 S1=SEL_1
-
-#.subckt OR3 A=MAIN_ENA B=LOAD_ENA C=RESET O=EN_A
-#.subckt OR3 A=MAIN_ENB B=LOAD_ENB C=RESET O=EN_B
-#.subckt OR3 A=MAIN_ENC B=LOAD_ENC C=RESET O=EN_C
 
 #LOAD OR FOR CHECKING WICH REGISTER NEED TO READ THE INPUTS
 .subckt OR A=MAIN_ENA B=RESET C=EN_A

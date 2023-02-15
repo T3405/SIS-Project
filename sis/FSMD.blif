@@ -1,0 +1,260 @@
+.model FSMD
+.inputs I4 I3 I2 I1 I0
+.outputs O5 O4 O3 O2 O1 O0
+.latch    [72] LatchOut_v2   1
+.latch    [73] LatchOut_v3   1
+.latch    [74] LatchOut_v4   1
+.latch    Q A_O0 fe NIL 0
+.latch    [626] A_O1 fe NIL 0
+.latch    [628] A_O2 fe NIL 0
+.latch    [630] A_O3 fe NIL 0
+.latch    [632] A_O4 fe NIL 0
+.latch    [719] B_O0 fe NIL 0
+.latch    [721] B_O1 fe NIL 0
+.latch    [723] B_O2 fe NIL 0
+.latch    [725] B_O3 fe NIL 0
+.latch    [727] B_O4 fe NIL 0
+.latch    [729] C_O0 fe NIL 0
+.latch    [731] C_O1 fe NIL 0
+.latch    [733] C_O2 fe NIL 0
+.latch    [735] C_O3 fe NIL 0
+.latch    [737] C_O4 fe NIL 0
+.names ERROR_SECTOR INIT_MAIN O5
+11 1
+.names INIT_MAIN OK_SIGNAL OUTPUT_INOUT O4
+110 1
+.names OUTPUT_INOUT INIT_MAIN OK_SIGNAL O3
+111 1
+.names EN_A EN_C [832] A_O4 A_O3 A_O2 A_O1 A_O0 O2
+100----- 1
+0--11111 1
+.names EN_B EN_C [832] B_O4 B_O3 B_O2 B_O1 B_O0 O1
+100----- 1
+0--11111 1
+.names EN_C [832] C_O4 C_O3 [1140] O0
+0-11- 1
+10--0 1
+.names LatchOut_v3 LatchOut_v4 [1119] INIT_LOAD
+--0 1
+01- 1
+10- 1
+.names I4 I3 LatchOut_v2 LatchOut_v4 [1124] INIT_MAIN
+1-01- 1
+-101- 1
+--011 1
+.names [867] [1134] START
+10 1
+.names INIT_MAIN LatchOut_v3 [72]
+01 1
+.names START LatchOut_v2 LatchOut_v3 LatchOut_v4 [1119] [73]
+----0 1
+10--- 1
+--11- 1
+.names INIT_LOAD START [72] [73] [74]
+1-1- 1
+-0-1 1
+--01 1
+.names I0 INIT_LOAD DECODER_OUT2 DECODER_OUT1 [1113] [1119] ERROR_SECTOR
+--11-- 1
+----10 1
+10--1- 1
+00--0- 1
+.names I4 I3 ERROR_SECTOR OUTPUT_INOUT MAIN_4 MAIN_3 IS_REGISTER_C [1117] \
+OK_SIGNAL
+--01---- 1
+010-0--- 1
+010--0-- 1
+010---01 1
+.names I4 I3 OUTPUT_INOUT
+10 1
+.names I2 INIT_LOAD LatchOut_v3 LatchOut_v4 DECODER_OUT2
+10-- 1
+--10 1
+.names I1 INIT_LOAD LatchOut_v3 LatchOut_v4 DECODER_OUT1
+10-- 1
+--01 1
+.names DECODER_OUT1 ERROR_SECTOR SEL_SECT0
+1- 1
+-1 1
+.names DECODER_OUT2 ERROR_SECTOR SEL_SECT1
+1- 1
+-1 1
+.names SEL_SECT0 SEL_SECT1 [1116] [1140] EN_A
+---1 1
+011- 1
+.names SEL_SECT0 SEL_SECT1 [1116] [1140] EN_B
+---1 1
+101- 1
+.names IS_REGISTER_C [1116] [1140] EN_C
+--1 1
+11- 1
+.names C3 [1120] MAIN_OUT4
+11 1
+00 1
+.names IS_REGISTER_C C_O4 B_O4 A_O4 [1125] [1127] MAIN_4
+11---- 1
+---11- 1
+--1--1 1
+.names OUTPUT_INOUT MAIN_3 C2 [1129] C3
+-11- 1
+1--1 1
+.names OUTPUT_INOUT C3 MAIN_3 C2 [1129] MAIN_OUT3
+10--- 1
+-0--1 1
+1-11- 1
+.names IS_REGISTER_C C_O3 B_O3 A_O3 [1125] [1127] MAIN_3
+11---- 1
+---11- 1
+--1--1 1
+.names OUTPUT_INOUT [1117] [1130] C2
+-0- 1
+1-1 1
+.names OUTPUT_INOUT C2 [1117] [1130] MAIN_OUT2
+10-- 1
+1-0- 1
+-0-1 1
+.names IS_REGISTER_C C_O2 B_O2 A_O2 [1125] [1127] MAIN_2
+11---- 1
+---11- 1
+--1--1 1
+.names OUTPUT_INOUT MAIN_1 MAIN_0 [1131] C1
+-11- 1
+1--1 1
+.names OUTPUT_INOUT C1 MAIN_1 MAIN_0 [1131] MAIN_OUT1
+10--- 1
+-0--1 1
+1-11- 1
+.names IS_REGISTER_C C_O1 B_O1 A_O1 [1125] [1127] MAIN_1
+11---- 1
+---11- 1
+--1--1 1
+.names IS_REGISTER_C C_O0 B_O0 A_O0 [1125] [1127] MAIN_0
+11---- 1
+---11- 1
+--1--1 1
+.names SEL_SECT0 SEL_SECT1 IS_REGISTER_C
+00 1
+.names I4 I3 INIT_MAIN MAIN_OUT4 MAIN_OUT3 MAIN_OUT2 MAIN_OUT1 MAIN_0 \
+IS_REGISTER_C [1134] [832]
+0-0------- 1
+-00------- 1
+--10------ 1
+--1-0----- 1
+--1--0--0- 1
+--1---0-0- 1
+--1----10- 1
+--0-----01 1
+.names EN_A A_O0 [1121] Q
+01- 1
+1-1 1
+.names EN_A A_O1 [1122] [626]
+01- 1
+1-1 1
+.names EN_A A_O2 [1123] [628]
+01- 1
+1-1 1
+.names EN_A A_O3 [1114] [630]
+01- 1
+1-1 1
+.names EN_A A_O4 [1115] [632]
+01- 1
+1-1 1
+.names EN_B B_O0 [1121] [719]
+01- 1
+1-1 1
+.names EN_B B_O1 [1122] [721]
+01- 1
+1-1 1
+.names EN_B B_O2 [1123] [723]
+01- 1
+1-1 1
+.names EN_B B_O3 [1114] [725]
+01- 1
+1-1 1
+.names EN_B B_O4 [1115] [727]
+01- 1
+1-1 1
+.names I0 EN_C MAIN_0 C_O0 [1139] [1141] [729]
+-0-1-- 1
+1---1- 1
+--0--1 1
+.names I1 EN_C MAIN_OUT1 C_O1 [1139] [1141] [731]
+-0-1-- 1
+1---1- 1
+--1--1 1
+.names I2 EN_C MAIN_OUT2 C_O2 [1139] [1141] [733]
+-0-1-- 1
+1---1- 1
+--1--1 1
+.names EN_C C_O3 [1114] [735]
+01- 1
+1-1 1
+.names EN_C C_O4 [1115] [737]
+01- 1
+1-1 1
+.names I4 I3 [867]
+11 1
+.names INIT_LOAD INIT_MAIN [1111]
+10 1
+.names INIT_LOAD INIT_MAIN [1112]
+01 1
+.names DECODER_OUT2 DECODER_OUT1 [1113]
+1- 1
+-1 1
+.names I3 MAIN_OUT3 [1111] [1112] [1114]
+1-1- 1
+-1-1 1
+.names I4 MAIN_OUT4 [1111] [1112] [1115]
+1-1- 1
+-1-1 1
+.names INIT_LOAD OK_SIGNAL [1116]
+1- 1
+-1 1
+.names MAIN_2 C1 [1117]
+0- 1
+-0 1
+.names LatchOut_v2 LatchOut_v4 [1119]
+1- 1
+-1 1
+.names OUTPUT_INOUT MAIN_4 [1120]
+11 1
+00 1
+.names I0 MAIN_0 [1111] [1112] [1121]
+1-1- 1
+-0-1 1
+.names I1 MAIN_OUT1 [1111] [1112] [1122]
+1-1- 1
+-1-1 1
+.names I2 MAIN_OUT2 [1111] [1112] [1123]
+1-1- 1
+-1-1 1
+.names I2 I1 I0 [1124]
+1-- 1
+-1- 1
+--1 1
+.names SEL_SECT0 IS_REGISTER_C [1125]
+00 1
+.names EN_C [1111] [1126]
+11 1
+.names SEL_SECT1 IS_REGISTER_C [1127]
+00 1
+.names MAIN_3 C2 [1129]
+1- 1
+-1 1
+.names MAIN_2 C1 [1130]
+1- 1
+-1 1
+.names MAIN_1 MAIN_0 [1131]
+1- 1
+-1 1
+.names I2 I1 I0 [1134]
+0-- 1
+-0- 1
+--0 1
+.names [867] [1126] [1139]
+01 1
+.names INIT_LOAD INIT_MAIN [1140]
+00 1
+.names EN_C [1112] [1141]
+11 1
+.end
