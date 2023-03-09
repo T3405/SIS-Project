@@ -1,9 +1,0 @@
-.model simply
-.inputs x y z v
-.outputs o
-.names x y z v o
-010- 1
-00-- 1
--101 1
--11- 1
-.end
